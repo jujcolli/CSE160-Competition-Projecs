@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mooncraft</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="800" height="800">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p id="stats">XXX</p>
+    <label for="cheeseCnt: ">Cheese hoard</label>
+    <p id="cheeseCnt">0</p>
+    <div>
+      <label for="renderDist">Render Distance (Disclaimer: this will make you lag)</label>
+      <input type="range" id="renderDist" name="renderDist"
+             min="1" max="15" value="1">
+    </div>
+
+    <div>
+       <h5>Light Position & Animation:</h5>
+      <label for="lightX">Change X Position of Light</label>
+      <input type="range" id="lightX" name="lightX"
+             min="-50" max="50" value="0">
+      <label for="lightY">Change Y Position of Light</label>
+      <input type="range" id="lightY" name="lightY"
+             min="0" max="45" value="45">
+      <label for="lightZ">Change Z Position of Light</label>
+      <input type="range" id="lightZ" name="lightZ"
+             min="-50" max="50" value="0">
+      <input type="button" value="Reset Position" id="reset">
+      <input type="button" value="Day & Night On/Off" id="DayNight">
+      <input type="button" value="Flashlight (spotlight) On/Off" id="spotlight">
+      <label for="lightZ">Flashlight Angle</label>
+      <input type="range" id="spotAngle" name="spotAngle"
+             min="10" max="90" value="35">
+    </div>
+
+    <div>
+      <h5>Light Color, Mode & Object Animation:</h5>
+     <label for="lightR">Red</label>
+     <input type="range" id="lightR" name="lightR"
+            min="0" max="255" value="255">
+     <label for="lightG">Green</label>
+     <input type="range" id="lightG" name="lightG"
+            min="0" max="255" value="255">
+     <label for="lightB">Blue</label>
+     <input type="range" id="lightB" name="lightB"
+            min="0" max="255" value="255">
+     <label for="lightMode">Select a lighting mode (debug, no lighting, or phong lighting)</label>
+     <input type="range" id="lightMode" name="lightMode"
+            min="-1" max="1" value="1">
+     <input type="button" value="Static Light (cannot change lighting modes while in use)" id="static">
+     <input type="button" value="Animate Objects" id="animate">
+   </div>
+
+    <div>
+      <h5>Debug</h5>
+      <input type="button" value="Normals On" id="normalsDebugOn">
+      <input type="button" value="Normals Off" id="normalsDebugOff">
+   </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="world.js"></script>
+    <script src="cube.js"></script>
+    <script src="voxel.js"></script>
+    <script src="triangle.js"></script>
+    <script src="cylinder.js"></script>
+    <script src="cone.js"></script>
+    <script src="sphere.js"></script>
+    <script src="camera.js"></script>
+    <script src="miner.js"></script>
+    <script src="chunk.js"></script>
+    <script src="perlin.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+  </body>
+</html>

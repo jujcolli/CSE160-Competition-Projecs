@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p id="stats">XXX</p>
+    <div>
+      <label for="angleY">Camera Angle Y</label>
+      <input type="range" id="angleY" name="angleY"
+             min="0" max="360" value="0">
+      <label for="angleX">Camera Angle X</label>
+      <input type="range" id="angleX" name="angleX"
+             min="0" max="360" value="0">
+    </div>
+    <div>
+       <h5>Left Leg</h5> <!-- accidentally labeled right leg as left leg in java script (denoted by L or R at end of var name) and vice versa-->
+       <label for="upperlegR">upperleg</label>
+       <input type="range" id="upperlegR" name="upperlegR"
+              min="-90" max="90" value="0">
+      <label for="lowerlegR">lowerleg</label>
+      <input type="range" id="lowerlegR" name="lowerlegR"
+             min="-90" max="90" value="0">
+      <label for="footR">foot</label>
+      <input type="range" id="footR" name="footR"
+             min="-45" max="45" value="0">
+    </div>
+    <div>
+       <h5>Right Leg</h5> <!-- accidentally labeled right leg as left leg in java script (denoted by L or R at end of var name) and vice versa-->
+       <label for="upperlegL">upperleg</label>
+       <input type="range" id="upperlegL" name="upperlegL"
+              min="-90" max="90" value="0">
+      <label for="lowerlegL">lowerleg</label>
+      <input type="range" id="lowerlegL" name="lowerlegL"
+             min="-90" max="90" value="0">
+      <label for="footL">foot</label>
+      <input type="range" id="footL" name="footL"
+             min="-45" max="45" value="0">
+    </div>
+    <div>
+       <h5>Left Arm</h5>
+       <label for="upperarmzL">upperarmZ</label>
+       <input type="range" id="upperarmzL" name="upperarmzL"
+              min="15" max="90" value="25">
+       <label for="upperarmxL">upperarmX</label>
+       <input type="range" id="upperarmxL" name="upperarmxL"
+              min="-90" max="90" value="0">
+      <label for="midarmzL">midarmZ</label>
+      <input type="range" id="midarmzL" name="midarmzL"
+             min="35" max="90" value="0">
+      <label for="midarmyL">midarmY</label>
+      <input type="range" id="midarmyL" name="midarmyL"
+             min="-45" max="45" value="0">
+      <label for="midarmxL">midarmX</label>
+      <input type="range" id="midarmxL" name="midarmxL"
+             min="-90" max="90" value="0">
+      <label for="lowarmL">lowarm</label>
+      <input type="range" id="lowarmL" name="lowarmL"
+             min="0" max="160" value="75">
+      <label for="hand">hand gun</label>
+      <input type="range" id="hand" name="hand"
+             min="-45" max="45" value="0">
+    </div>
+    
+    <div>
+       <h5>Right Arm</h5>
+       <label for="upperarmzR">upperarmZ</label>
+       <input type="range" id="upperarmzR" name="upperarmzR"
+              min="15" max="90" value="25">
+       <label for="upperarmxR">upperarmX</label>
+       <input type="range" id="upperarmxR" name="upperarmxR"
+              min="-90" max="90" value="0">
+      <label for="midarmzR">midarmZ</label>
+      <input type="range" id="midarmzR" name="midarmzR"
+             min="35" max="90" value="0">
+      <label for="midarmyR">midarmY</label>
+      <input type="range" id="midarmyR" name="midarmyR"
+             min="-45" max="45" value="0">
+      <label for="midarmxR">midarmX</label>
+      <input type="range" id="midarmxR" name="midarmxR"
+             min="-90" max="90" value="0">
+      <label for="lowarmR">lowarm</label>
+      <input type="range" id="lowarmR" name="lowarmR"
+             min="0" max="160" value="75">
+      <!--<label for="saw">Saw</label>
+      <input type="range" id="saw" name="saw"
+             min="1" max="360" value="1">-->
+    </div>
+
+    <div>
+       <h5>Animation (shift-click enables and disables a special animation)</h5>
+       <input type="button" value="Swing" id="swing">
+       <input type="button" value="Jump" id="jump">
+       <input type="button" value="Still" id="still">
+       <input type="button" value="Reset" id="reset">
+       <label for="speed">speed of animation</label>
+       <input type="range" id="speed" name="speed"
+             min="3" max="15" value="3">
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="blockyAnimal.js"></script>
+    <script src="cube.js"></script>
+    <script src="triangle.js"></script>
+    <script src="cylinder.js"></script>
+    <script src="cone.js"></script>
+    <script src="sphere.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+  </body>
+</html>
